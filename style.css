@@ -63,3 +63,66 @@ main{
     padding: 8px;
     z-index: 2;
 }
+
+#countries{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 30px;
+}
+
+.country{
+    margin: 20px;
+    box-shadow: 1px 1px 7px 1px lightgray;
+    border-radius: 10px;
+}
+.flag-image{
+    width: 100%;
+}
+.flag-image img{
+    width: 100%;
+    height: 100%;
+}
+.description{
+    padding: 10px;
+}
+.description span{
+    font-weight: 700;
+}
+.country-name{
+    margin: 8px 0px;
+}
+
+@media screen and (max-width: 1300px){
+    #countries{
+        grid-gap: auto;
+    }
+}
+
+@media screen and (max-width : 1200px){
+    #countries{
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media screen and (max-width: 900px){
+    #countries{
+        grid-template-columns: auto auto;
+    }   
+}
+
+@media screen and (max-width: 700px){
+    #countries{
+        grid-gap: 4px;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 560px){
+    #countries{
+        grid-template-columns: 1fr;
+    }
+    .description{
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+}
