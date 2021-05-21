@@ -1,0 +1,65 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root{
+    --dark-mode: black;
+    --light-mode: white;
+    --main-font: sans-serif;
+}
+
+/* header */
+header{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 1px 1px 8px 1px lightgray;
+}
+
+header div{
+    margin: 17px 20px;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+}
+header div span{
+    margin: 5px;
+}
+
+/* main */
+main{
+    width: 80%;
+    margin: auto;
+}
+#searching{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.input{
+    width: 37%;
+    position: relative;
+}
+#searching input{
+    width: 100%;
+    padding: 13px 40px;
+    border: none;
+    outline: none;
+    box-shadow: 1px 1px 7px 1px lightgrey;
+}
+.icon{
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    color: gray;
+}
+.options{
+    width: 13%;
+}
+#country-options{
+    width: 100%;
+    padding: 8px;
+    z-index: 2;
+}
