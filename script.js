@@ -78,40 +78,40 @@ function showCountries(){
     }
 }
 
-let input = document.getElementById('search-country');
-let suggestions = document.getElementById('suggestions')
-input.addEventListener('keypress', function(event){
-    let option = input.value;
-    console.log(option);
-    let xhrRequest = new XMLHttpRequest();
-    xhrRequest.open('get', `https://restcountries.eu/rest/v2/name/${option}`);
-    xhrRequest.onload = function(){
-        let xhrResponse = JSON.parse(xhrRequest.response);
-        suggestions.innerHTML = "";
-        for(let country of xhrResponse){
-            let element = document.createElement('div');
-            element.innerHTML = `${country.name}`;
-            element.setAttribute('class', 'suggestion-country');
-            suggestions.append(element);
-        }
-    }
-    xhrRequest.send();
-    xhrRequest.onerror = function(xhrObject, status){
-        if(status == 404){
-            return;
-        }
-    }
-    if(event.keyCode === 13){
-        let countryName = input.value;
-    }
-})
+// let input = document.getElementById('search-country');
+// let suggestions = document.getElementById('suggestions')
+// input.addEventListener('keypress', function(event){
+//     let option = input.value;
+//     console.log(option);
+//     let xhrRequest = new XMLHttpRequest();
+//     xhrRequest.open('get', `https://restcountries.eu/rest/v2/name/${option}`);
+//     xhrRequest.onload = function(){
+//         let xhrResponse = JSON.parse(xhrRequest.response);
+//         suggestions.innerHTML = "";
+//         for(let country of xhrResponse){
+//             let element = document.createElement('div');
+//             element.innerHTML = `${country.name}`;
+//             element.setAttribute('class', 'suggestion-country');
+//             suggestions.append(element);
+//         }
+//     }
+//     xhrRequest.send();
+//     xhrRequest.onerror = function(xhrObject, status){
+//         if(status == 404){
+//             return;
+//         }
+//     }
+//     if(event.keyCode === 13){
+//         let countryName = input.value;
+//     }
+// })
 
-input.addEventListener('keydown', function(event){
-    console.log(event.keyCode);
-    if(event.keyCode === 13){
+// input.addEventListener('keydown', function(event){
+//     console.log(event.keyCode);
+//     if(event.keyCode === 13){
         
-    }
-})
+//     }
+// })
 
 // let getOneCountry = function(){
 
