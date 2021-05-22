@@ -178,3 +178,10 @@ back.addEventListener('click', function(){
     body.classList.toggle('open');  
 })
 
+let darkMode = document.querySelectorAll('#themes h2');
+for(let mode of darkMode){
+    mode.addEventListener('click', function(event){
+        let body = document.querySelector('body');
+        body.classList.toggle('dark');
+    })
+}

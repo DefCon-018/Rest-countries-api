@@ -7,6 +7,7 @@
 
 :root{
     --dark-mode: black;
+    --secondary-dark-color: #1E1E1E;
     --light-mode: white;
     --main-font: sans-serif;
 }
@@ -178,11 +179,70 @@ main{
     font-weight: 700;
 }
 
+#light-theme{
+    display: none;
+    cursor: pointer;
+}
+
 #border-countries {
     height: 100px;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
+}
+
+.dark .input{
+    background-color: var(--secondary-dark-color);
+    box-shadow: none;
+}
+.dark header{
+    background-color: var(--secondary-dark-color);
+    box-shadow: none;
+}
+.dark .country{
+    box-shadow: none;
+}
+.dark .description{
+    background-color: var(--secondary-dark-color);
+}
+body.dark{
+    color: white;
+    background-color: var(--dark-mode);
+}
+.dark ::placeholder{
+    color: white;
+    opacity: 0.8;
+}
+.dark #searching input{
+    box-shadow: none;
+    background-color: var(--secondary-dark-color);
+}
+.dark #country-options{
+    background-color: var(--secondary-dark-color);
+    color: white;
+}
+.dark #back span{
+    box-shadow: none;
+    background-color: var(--secondary-dark-color);
+    color: white;
+}
+.dark #border-countries span{
+    box-shadow: none;
+    background-color: var(--secondary-dark-color);
+    color: white;
+}
+/* .dark #seperate-country{
+    color: white;
+    background-color: var(--dark-mode);
+} */
+#dark-theme{
+    cursor: pointer;
+}
+.dark #dark-theme{
+    display: none;
+}
+.dark #light-theme{
+    display: block;
 }
 
 @media screen and (max-width: 1300px){
