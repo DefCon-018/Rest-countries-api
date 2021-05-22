@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 :root{
@@ -74,6 +75,7 @@ main{
     margin: 20px;
     box-shadow: 1px 1px 7px 1px lightgray;
     border-radius: 10px;
+    cursor: pointer;
 }
 .flag-image{
     width: 100%;
@@ -92,6 +94,97 @@ main{
     margin: 8px 0px;
 }
 
+#suggestions{
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+    top: 100%;
+    background-color: white;
+}
+.suggestion-country{
+    cursor: pointer;
+    padding: 10px;
+    border-top: 0.5px solid gray;
+}
+
+
+/* seperate country */
+#seperate-country{
+    width: 80%;
+    margin: auto;
+}
+.country-detail{
+    display: flex;
+    justify-content: space-between;
+}
+#country-flag-name{
+    width: 40%;
+}
+#country-flag-name img{
+    width: 100%;
+}
+#country-description{
+    width: 50%;
+}
+#country-description div{
+    margin-top: 5px;
+}
+
+#sc-description{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px;
+} 
+/* #sc-description div{
+    margin-top: 5px;
+} */
+#seperate-country{
+    display: none;
+}
+#main{
+    display: block;
+}
+.open #main{
+    display: none;
+}
+.open #seperate-country{
+    display: block;
+}
+#border-countries span{
+    margin: -3px 5px;
+    padding: 3px 6px;
+    /* border: 1px solid lightgray; */
+    box-shadow: 1px 1px 6px 0.5px lightgray;
+}
+#sc-container{
+    margin: 50px 0px;
+}
+#border-countries-container{
+    margin-top: 70px;
+}
+#back{
+    margin: 50px 0px;
+    cursor: pointer;
+}
+#back span{
+    padding: 8px 50px 8px 10px;
+    box-shadow: 1px 1px 6px 0.5px lightgray;
+}
+#back span i{
+    margin: 5px;
+}
+.desc-span{
+    font-weight: 700;
+}
+
+#border-countries {
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
 @media screen and (max-width: 1300px){
     #countries{
         grid-gap: auto;
@@ -102,11 +195,39 @@ main{
     #countries{
         grid-template-columns: auto auto auto;
     }
+    #country-flag-name{
+        width: 50%;
+    }
+    #country-flag-name img{
+        width: 100%;
+    }
+    #country-description{
+        display: block;
+        width: 40%;
+        margin-left: 30px;
+    }
 }
 
 @media screen and (max-width: 900px){
+    main{
+        width: 90%;
+    }
     #countries{
         grid-template-columns: auto auto;
+    }
+    #country-flag-name{
+        width: 60%;
+    }
+    #country-flag-name img{
+        width: 100%;
+    }
+    #country-description{
+        display: block;
+        width: 30%;
+        margin-left: 30px;
+    }
+    #sc-description{
+        display: block;
     }   
 }
 
@@ -115,9 +236,42 @@ main{
         grid-gap: 4px;
         grid-template-columns: 1fr 1fr;
     }
+    .country-detail{
+        display: block;
+    }
+    #country-flag-name{
+        width: 100%;
+    }
+    #country-flag-name img{
+        width: 100%;
+    }
+    #country-description{
+        width: 100%;
+        margin-top: 40px;
+    }
+    #sc-container div{
+        margin-top: 20px;
+    }
+    #sc-description{
+        display: block;
+    }
+    #searching{
+        display: block;
+    }
+    .input{
+        margin: 20px 10px;
+        width: 80%;
+    }
+    .options {
+        margin: 20px 10px;
+        width: 40%;
+    }
 }
 
 @media screen and (max-width: 560px){
+    main{
+        width: 80%;
+    }
     #countries{
         grid-template-columns: 1fr;
     }
@@ -126,3 +280,4 @@ main{
         padding: 10px;
     }
 }
+

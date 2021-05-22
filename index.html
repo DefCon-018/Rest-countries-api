@@ -17,11 +17,14 @@
             <h2><span><i class="fas fa-moon"></i></span>Dark mode</h2>
         </div>
     </header>
-    <main>
+    <main id= "main">
         <div id= "searching">
             <div class= "input">
                 <i class="fas fa-search icon"></i>
-                <input placeholder="Search for a country...">
+                <input placeholder="Search for a country..." id= "search-country">
+                <div id= "suggestions">
+                    
+                </div>
             </div>
             <div class= "options">
                 <select id= "country-options" onchange="showCountries()">
@@ -38,6 +41,54 @@
 
         </div>
     </main>
+    <section id= "seperate-country">
+        <div id ="back">
+            <span>
+                <i class="fas fa-arrow-left"></i> back
+            </span> 
+        </div>
+        <div class = "country-detail">
+            <div id= "country-flag-name">
+                <img>
+            </div>
+            <div id= "country-description">
+                <h1 id= "sc-name"></h1>
+                <div id= "sc-container">
+                    <div id = "sc-description">
+                        <div id= "div1">
+                             <div id= "native-name">
+                             </div>
+                             <div id= "top-level-domain">
+                             </div>
+                             <div id= "population">
+                             
+                             </div>
+                        </div>
+                         <div id= "div2">
+                             <div id= "currency">
+                            
+                             </div>
+                             <div id= "region">
+                                
+                             </div>
+                             <div id= "language">
+                                 
+                             </div>
+                         </div>
+                     </div>
+                     <div id= "sub-region">
+                        
+                     </div>
+                     <div id= "capital">
+                        
+                     </div>
+                </div>
+                <div id= "border-countries-container">
+                    <p id= 'border-countries'><strong>Border Countries </strong>: </p>
+                </div>
+            </div>
+        </div>
+    </section>
     <script src= "script.js"></script>
 </body>
 </html>
